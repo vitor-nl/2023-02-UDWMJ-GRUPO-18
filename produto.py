@@ -1,2 +1,1 @@
-class produto:
-    def __init__   {self}
+print("Ola!")
