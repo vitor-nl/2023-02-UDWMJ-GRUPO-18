@@ -1,4 +1,16 @@
-from pessoa import Pessoa
+from django.urls import path, include
+from . import views
+from rest_framework import routers
+
+app_name = 'consult'
+
+router = routers.DefaultRouter()
+router.register('consulta', views.CategoryViewSet, basename='consulta')
+
+urlpatterns = [
+    path('', include(router.urls) )
+]
+from person.models import Pessoa
 
 class Consulta(Pessoa):
     def __init__(self, cpf, nome, datanasc, genero, estado, cidade, email, telefone):
@@ -6,7 +18,7 @@ class Consulta(Pessoa):
         self.consulta_agendada = False
         self.dados_consulta = {}
 
-    # Cria a consulta no banco de dados
+    #criar a consulta no banco de dados
     def criar_consulta(self): 
         print(f"Bem-vindo, {self.nome}!")
         cpf_paciente = input("Por favor, confirme o seu CPF: ")
