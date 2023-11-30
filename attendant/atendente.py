@@ -1,18 +1,6 @@
-from django.urls import path, include
-from . import views
-from rest_framework import routers
+from person.pessoa import Pessoa
 
-app_name = 'attendant'
-
-router = routers.DefaultRouter()
-router.register('atendente', views.CategoryViewSet, basename='atendente')
-
-urlpatterns = [
-    path('', include(router.urls) )
-]
-from person.models import Pessoa
-
-class Atendente(pessoa.Pessoa):
+class Atendente(person.Pessoa):
     
     def __init__(self, cpf, nome, datanasc, genero, estado, cidade, email, telefone):
         super().__init__(cpf, nome, datanasc, genero, estado, cidade, email, telefone)
