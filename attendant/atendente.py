@@ -1,6 +1,6 @@
 from person.pessoa import Pessoa
 
-class Atendente(person.Pessoa):
+class Atendente(Pessoa):
     
     def __init__(self, cpf, nome, datanasc, genero, estado, cidade, email, telefone):
         super().__init__(cpf, nome, datanasc, genero, estado, cidade, email, telefone)

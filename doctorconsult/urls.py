@@ -17,9 +17,15 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    # path('admin/', admin.site.urls),
+    # path('attendant/', include('attendant.urls', namespace='attendant')),
+    # path('person/', include('person.urls', namespace='person')),
+    # path('consult/', include('consult.urls', namespace='consult')),
+    # path('patient/', include('patient.urls', namespace='patient')),
+    
     path('admin/', admin.site.urls),
-    path('atendente/', include('atendente.urls', namespace='atendente')),
-    path('pessoa/', include('pessoa.urls', namespace='pessoa')),
-    path('consulta/', include('consulta.urls', namespace='consulta')),
-    path('paciente/', include('paciente.urls', namespace='paciente')),
+    path('attendant/', include('attendant.urls')),
+    path('person/', include('person.urls')),
+    path('consult/', include('consult.urls')),
+    path('patient/', include('patient.urls')),
 ]

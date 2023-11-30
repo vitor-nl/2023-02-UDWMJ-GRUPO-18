@@ -5,8 +5,9 @@ from rest_framework import routers
 app_name = 'patient'
 
 router = routers.DefaultRouter()
-router.register('paciente', views.CategoryViewSet, basename='paciente')
+router.register('paciente', views.PacienteViewSet, basename='paciente')
 
 urlpatterns = [
-    path('', include(router.urls) )
+    #path('', include((router.urls), namespace='patient'))
+    path('', include(router.urls))
 ]
