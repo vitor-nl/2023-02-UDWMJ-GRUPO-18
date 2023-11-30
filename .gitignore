@@ -2,3 +2,9 @@ db.sqlite3
 modeloapp/__pycache__/*
 /apps/pessoa/__pycache__/*
 /apps/pessoa/migrations/*
+/apps/paciente/__pycache__/*
+/apps/paciente/migrations/*
+/apps/consulta/__pycache__/*
+/apps/consulta/migrations/*
+/apps/atendente/__pycache__/*
+/apps/atendente/migrations/*
