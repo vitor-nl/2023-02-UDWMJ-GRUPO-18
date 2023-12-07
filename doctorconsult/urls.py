@@ -15,6 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import TemplateView
+from patient.views import LoginPageView
+from django.contrib.auth.views import LoginView
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
@@ -28,4 +31,13 @@ urlpatterns = [
     path('person/', include('person.urls')),
     path('consult/', include('consult.urls')),
     path('patient/', include('patient.urls')),
+    path('accounts/', include('allauth.urls')),
+    path('', TemplateView.as_view(template_name='login.html'), name='home'),
+    path('', LoginPageView.as_view(), name='index'),  
+    path('login/', LoginView.as_view(), name='login'),
+    
+    #templates:
+    
+    # path("chat/", include("apps.chat.urls")),
+    # path('admin/', admin.site.urls),
 ]

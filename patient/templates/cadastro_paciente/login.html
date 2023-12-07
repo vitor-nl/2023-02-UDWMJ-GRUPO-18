@@ -1,0 +1,24 @@
+<!-- patient/templates/patient/login.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Login</title>
+    <!-- Adicione qualquer outra meta informação ou link para folhas de estilo aqui -->
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="Entrar">
+        </form>
+        <p>Não tem uma conta? <a href="{% url 'cadastrar_paciente' %}">Cadastre-se aqui</a>.</p>
+    </div>
+</body>
+</html>
