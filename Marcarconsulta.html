@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marcar Consulta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .calendario {
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .botao-marcar {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .botao-voltar {
+            background-color: #f44336;
+            color: white;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Marcar Consulta</h2>
+        <div class="calendario">
+            <input type="date" id="data-consulta">
+        </div>
+        <button class="botao-marcar" onclick="marcarConsulta()">Marcar Consulta</button>
+        <button class="botao-voltar" onclick="voltar()">Voltar</button>
+    </div>
+
+    <script>
+        function marcarConsulta() {
+            var data = document.getElementById('data-consulta').value;
+            alert('Consulta marcada para: ' + data);
+            // Aqui você pode adicionar mais lógica para processar a data escolhida
+        }
+
+        function voltar() {
+            // Aqui você pode redirecionar o usuário para outra página ou realizar outra ação
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

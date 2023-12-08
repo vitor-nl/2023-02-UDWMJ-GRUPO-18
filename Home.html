@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DoctorConsult - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .logo {
+            width: 125px;
+            height: 125px;
+            background-image: url('C:/Users/Felipe Lima/html/pagina/Logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: inline-block;
+        }
+
+        .nav-bar {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 0;
+            border-radius: 5px;
+        }
+
+        .nav-bar a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-bar a:hover {
+            background-color: #555;
+        }
+
+        .content {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .consultas {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .consulta-item {
+            border-bottom: 1px solid #eee;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .consulta-item:last-child {
+            border-bottom: none;
+        }
+
+        .consulta-data {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .consulta-info {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png" alt="DoctorConsult Logo" class="logo">
+        <div class="nav-bar">
+            <a href="#marcar-consulta">Marcar Consulta</a>
+            <a href="#perfil">Perfil</a>
+            <a href="#horarios-disponiveis">Horários Disponíveis</a>
+            <a href="#quem-somos-nos">Quem Somos Nós</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="consultas">
+            <h2>Próximas Consultas</h2>
+            <div class="consulta-item">
+                <div class="consulta-data">24 de Junho, 10:00</div>
+                <div class="consulta-info">Consulta com Dr. Silva</div>
+            </div>
+            <div class="consulta-item">
+                <div class="consulta-data">30 de Junho, 14:00</div>
+                <div class="consulta-info">Consulta com Dra. Maria</div>
+            </div>
+            <!-- Mais itens de consulta podem ser adicionados aqui -->
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Direitos reservados © DoctorConsult</p>
+    </div>
+</body>
+</html>

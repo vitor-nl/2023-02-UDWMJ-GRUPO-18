@@ -18,6 +18,7 @@ from django.urls import path, include
 from django.views.generic import TemplateView
 from patient.views import LoginPageView
 from django.contrib.auth.views import LoginView
+from django.urls import path
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
@@ -35,9 +36,11 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='login.html'), name='home'),
     path('', LoginPageView.as_view(), name='index'),  
     path('login/', LoginView.as_view(), name='login'),
+    path('admin/', admin.site.urls),
+    path('login/', LoginView.as_view(template_name='login.html'), name='login'),
     
     #templates:
     
     # path("chat/", include("apps.chat.urls")),
     # path('admin/', admin.site.urls),
-]
+]   

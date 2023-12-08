@@ -12,6 +12,5 @@ router.register('paciente', views.PacienteViewSet, basename='paciente')
 urlpatterns = [
     #path('', include((router.urls), namespace='patient'))
     path('', include(router.urls)),
-    path('cadastrar_paciente/', cadastrar_paciente, name='cadastrar_paciente'),
     path('login/', LoginPageView.as_view(), name='login'),
 ]

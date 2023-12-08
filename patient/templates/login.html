@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 300px;
+            margin: 100px auto;
+            text-align: center;
+            background-color: #f3f3f3;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .welcome-message {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: blue;
+            transition: transform 0.3s ease;
+            background: linear-gradient(45deg, #6DD5FA, #FF758C);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .welcome-message:hover {
+            transform: scale(1.1);
+        }
+
+        .form-input {
+            margin: 15px 0;
+            background: #e8e8e8;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 95%;
+            padding: 10px;
+            border: none;
+            background-color: #5fbae9;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #4a9cd3;
+        }
+
+        .forgot-password {
+            margin-top: 10px;
+        }
+
+        .forgot-password a {
+            color: #5fbae9;
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-message">
+            Bem Vindo Ao DoctorConsult
+        </div>
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-input">
+                <input type="text" id="username" name="username" placeholder="Usuário">
+            </div>
+            <div class="form-input">
+                <input type="password" id="password" name="password" placeholder="Senha">
+            </div>
+            <div class="form-input">
+                <button type="submit">Login</button>
+            </div>
+            <div class="forgot-password">
+                <a href="#">Esqueci a senha</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

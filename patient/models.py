@@ -34,3 +34,4 @@ class Paciente(models.Model):
     telefone = models.CharField(max_length=20, default='Valor Padrão para Telefone')
     consulta_agendada = models.BooleanField(default=False)
     dados_consulta = models.JSONField(default=dict)
+    id = models.AutoField(primary_key=True, default=0)

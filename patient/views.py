@@ -4,6 +4,7 @@ from rest_framework import viewsets
 from .serializer import PacienteSerializer
 from django.contrib import messages
 from django.views.generic import TemplateView
+from . import views
 
 # Create your views here.
 
